@@ -2,10 +2,10 @@
   "name": "mongoosed",
   "version": "1.0.0",
   "description": "AS A social media startup\r I WANT an API for my social network that uses a NoSQL database\r SO THAT my website can handle large amounts of unstructured data",
-  "main": "connections.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node index",
-    "dev": "nodemon index",
+    "start": "node server.js",
+    "dev": "nodemon server.js",
     "seed": "node utils/seed",
     "heroku-postbuild": "node utils/seed.js"
   },
