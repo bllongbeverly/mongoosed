@@ -1,11 +1,11 @@
 const express = require('express');
 const router = express.Router();
-const { thought } = require('../../models'); 
+const { Thought, User } = require('../../models'); 
 
 
 router.get('/', async (req, res) => {
 try {
-    const thought = await User.find();
+    const thought = await Thought.find();
     res.json(thought);
 } catch (err) {
     console.log(err);
