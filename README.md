@@ -26,5 +26,5 @@ Bootcamp-Module, Caleb Crum, Chatgpt
 
 ## Image
 
-"C:\Users\bllon\bootcamp\challenges-repo\mongoosed\Screenshot 2023-08-01 194528.png"
-chrome-extension://mmeijimgabbpbgpdklnllpncmdofkcpn/app.html#/files/ed316143-a11e-418d-y8af-ad896d59daf9
+Screenshot 2023-08-01 194528
+https://drive.google.com/file/d/1vz-uMgvS9hnvRDaaxWPsek8TXN_2tCo6/view
