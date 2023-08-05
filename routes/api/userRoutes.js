@@ -1,8 +1,7 @@
-const express = require('express');
-const router = express.Router();
+const Router = require('express').Router();
 const { User} = require('../../models'); 
 
-router.get('/', async (req, res) => {
+Router.get('/', async (req, res) => {
   try {
     const users = await User.find();
     res.json(users);
@@ -13,7 +12,7 @@ router.get('/', async (req, res) => {
 });
 
 
-router.post('/', async (req, res) => {
+Router.post('/', async (req, res) => {
   try {
     const { name, email } = req.body;
     const user = new User({ name, email });
@@ -25,7 +24,7 @@ router.post('/', async (req, res) => {
 });
 
 
-router.put('/:id', async (req, res) => {
+Router.put('/:id', async (req, res) => {
   try {
     const { id } = req.params;
     const { name, email } = req.body;
@@ -37,7 +36,7 @@ router.put('/:id', async (req, res) => {
 });
 
 // Route to delete a user
-router.delete('/:id', async (req, res) => {
+Router.delete('/:id', async (req, res) => {
   try {
     const { id } = req.params;
     await User.findByIdAndDelete(id);
@@ -47,4 +46,4 @@ router.delete('/:id', async (req, res) => {
   }
 });
 
-module.exports = router;
+module.exports = Router;

@@ -26,5 +26,5 @@ Bootcamp-Module, Caleb Crum, Chatgpt
 
 ## Image
 
-Screenshot 2023-08-01 194528
+
 https://drive.google.com/file/d/1vz-uMgvS9hnvRDaaxWPsek8TXN_2tCo6/view
