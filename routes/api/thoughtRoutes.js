@@ -15,10 +15,12 @@ try {
 
 Router.post('/', async (req, res) => {
  try {
-    const { name, email } = req.body;
-    const thought = new Thought({ name, email });
-    await thought.save();
-    res.json(thought);
+  const { username, email } = req.body;
+
+  const thought = new Thought({ thoughtText, username });
+  await thought.save();
+  res.json(thought);
+  
 } catch (err) {
     res.status(500).json({ error: 'Server error' });
 }
@@ -28,9 +30,11 @@ Router.post('/', async (req, res) => {
 Router.put('/:id', async (req, res) => {
   try {
     const { id } = req.params;
-    const { name, email } = req.body;
-    const thought = await thought.findByIdAndUpdate(id, { name, email }, { new: true });
-    res.json(thought);
+    const { username, email } = req.body;
+
+    const thought = await Thought.findByIdAndUpdate(id, { thoughtText, username }, { new: true });
+res.json(thought);
+
   } catch (err) {
     res.status(500).json({ error: 'Server error' });
   }
@@ -39,7 +43,8 @@ Router.put('/:id', async (req, res) => {
 Router.delete('/:id', async (req, res) => {
   try {
     const { id } = req.params;
-    await User.findByIdAndDelete(id);
+    await Thought.findByIdAndDelete(id);
+
     res.json({ message: 'thought deleted successfully' });
   } catch (err) {
     res.status(500).json({ error: 'Server error' });
